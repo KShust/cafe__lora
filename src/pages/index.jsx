@@ -8,13 +8,16 @@ import { Contact } from "./components/Contact/Contact"
 import { Footer } from "./components/Footer/Footer"
 import { Scroll_fce } from './components/Scroll_fce/Scroll_fce';
 
+const response = await fetch(`http://localhost:4000/api/drinks`)
+const json = await response.json()
+export const drinks = json.data
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
     <main>
       <Banner />
-      <Menu />
+      <Menu drinks={drinks}/>
       <Gallery />
       <Contact />
     </main>

@@ -1,3 +1,4 @@
+import { drinks } from "../.."
 import { Drink } from "../Drink/Drink"
 import "../Menu/menu.css"
 
@@ -10,9 +11,15 @@ export const Menu = () => {
             Vyberte si z našeho interaktivního menu a nemusíte čekat na obsluhu
             </p>
             <div className="drinks-list">
-              <Drink name={'Espresso'} image={"/cups/espresso.png"} />
-              <Drink name={'Doppio'} image={"/cups/doppio.png"} />
-              <Drink name={'Lungo'} image={"/cups/lungo.png"} />
+            {drinks.map((drink) => (
+              <Drink
+              key={drink.id}
+              id={drink.id}
+              name={drink.name}
+              image={`http://localhost:4000${drink.image}`}
+              layers={drink.layers}
+              />
+            ))}
             </div>
           <div className="order-detail">
             <a href="/order.html">Detail objednávky</a>
