@@ -9,8 +9,8 @@ export const Scroll_fce = () => {
     rolloutNav.addEventListener('click', (event) => {
         const odkaz = event.target.closest('a');
         if (odkaz) {
-            const href = link.getAttribute('href').split('#')[1];
-            const section = document.getElementById(id);
+            const href = odkaz.getAttribute('href').split('#')[1];
+            const section = document.getElementById(href);
             if (section) {
                 section.scrollIntoView();
                 rolloutNav.classList.add('nav-closed');
