@@ -1,4 +1,3 @@
-
 import { drinks } from "../../pages"
 import { Drink } from "../Drink/Drink"
 import "../Menu/menu.css"
