@@ -26,3 +26,28 @@ document.querySelector('#root').innerHTML = render(
 )
 
 Scroll_fce()
+
+const forms = document.querySelectorAll('.drink__controls')
+forms.forEach((form) =>
+  form.addEventListener('submit', (formFce) => {
+    formFce.preventDefault()
+    const napojID = form.dataset.id 
+
+    const drink = drinks.find((drink) => drink.id == napojID);
+    const newOrderedState =!drink.ordered
+
+      fetch(`http://localhost:4000/api/drinks/${napojID}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([{
+        op: 'replace',
+        path: '/ordered',
+        value: newOrderedState ,
+      }]),
+    });
+    
+    window.location.reload()
+  }
+))
