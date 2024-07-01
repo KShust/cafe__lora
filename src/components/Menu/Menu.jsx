@@ -1,8 +1,7 @@
-import { drinks } from "../../pages"
 import { Drink } from "../Drink/Drink"
 import "../Menu/menu.css"
 
-export const Menu = () => {
+export const Menu = ({ drinks }) => {
     return (
         <section className="menu" id="menu">
           <div className="container">

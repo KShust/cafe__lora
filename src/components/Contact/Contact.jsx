@@ -16,7 +16,8 @@ export const Contact = () => {
             <tr><td>Úterý</td><td>11:00 - 22:00</td></tr>
             <tr><td>Středa</td><td>11:00 - 22:00</td></tr>
             <tr><td>Čtvrtek</td><td>11:00 - 22:00</td></tr>
-            <tr><td>Sobota</td><td>9:00 - 02:00</td></tr>              <tr><td>Neděle</td><td>9:00 - 02:00</td></tr>
+            <tr><td>Sobota</td><td>9:00 - 02:00</td></tr>              
+            <tr><td>Neděle</td><td>9:00 - 02:00</td></tr>
           </table>
           <img className="contact__map" src="./img/map.png"/>
         </div>
