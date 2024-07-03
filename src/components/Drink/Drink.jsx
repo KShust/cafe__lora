@@ -1,5 +1,5 @@
 import "../Drink/drink.css"
-import { Layer } from "../Layers/Layers"
+import { Layer } from "../Layer/Layer"
 
 export const Drink = ({ id, name, ordered, image, layers }) => {
   return (

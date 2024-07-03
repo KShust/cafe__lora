@@ -1,4 +1,4 @@
-import "../Layers/layers.css"
+import "../Layer/layer.css"
 
 export const Layer = ({ color, label }) => {
   return (

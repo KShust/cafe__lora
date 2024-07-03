@@ -31,9 +31,9 @@ const forms = document.querySelectorAll('.drink__controls')
 forms.forEach((form) =>
   form.addEventListener('submit', async (formFce) => {
     formFce.preventDefault()
-    const napojID = form.dataset.id 
+    const napojID = Number(form.dataset.id)
 
-    const drink = drinks.find((drink) => drink.id == napojID);
+    const drink = drinks.find((drink) => drink.id === napojID);
     const newOrderedState =!drink.ordered
 
       await fetch(`http://localhost:4000/api/drinks/${napojID}`, {
